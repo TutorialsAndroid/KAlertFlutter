@@ -61,7 +61,7 @@ Add the package:
 
 ```yaml
 dependencies:
-  kalertflutter: ^1.1.0
+  kalertflutter: ^1.2.0
 ```
 
 Then run:

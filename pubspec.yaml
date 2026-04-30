@@ -1,6 +1,6 @@
 name: kalertflutter
 description: Flutter alert dialog library with success, error, warning, info, confirm, and prompt dialogs.
-version: 1.1.0
+version: 1.2.0
 homepage: https://github.com/TutorialsAndroid/KAlertFlutter
 repository: https://github.com/TutorialsAndroid/KAlertFlutter
 issue_tracker: https://github.com/TutorialsAndroid/KAlertFlutter/issues
