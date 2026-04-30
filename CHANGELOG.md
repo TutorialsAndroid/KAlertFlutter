@@ -1,10 +1,15 @@
-## 1.0.0
+## 1.2.0
 
-Initial release
+Major feature upgrade release
 
-Features:
+New features:
 
-- Alert dialog
-- Confirm dialog
-- Simple API
-- Lightweight package
+- success dialog type
+- error dialog type
+- warning dialog type
+- info dialog type
+- confirm dialog support
+- prompt dialog support
+- icon support
+- modern rounded UI dialog design
+- improved API structure

@@ -1,28 +1,67 @@
+![pub.dev](https://img.shields.io/pub/v/kalertflutter)
+![license](https://img.shields.io/badge/license-MIT-green)
+![flutter](https://img.shields.io/badge/platform-Flutter-blue)
+
 # KAlertFlutter
 
-A lightweight and easy-to-use alert dialog package for Flutter.
+A lightweight, modern alert dialog package for Flutter.
 
-KAlertFlutter provides simple helper methods to display **alert dialogs** and **confirm dialogs** using a clean API. It is designed to reduce boilerplate code when working with Flutter dialogs.
+KAlertFlutter provides **success, error, warning, info, confirm, and prompt dialogs** using a clean and simple API. It helps reduce boilerplate code when working with dialogs in Flutter apps.
+
+🔗 pub.dev package:
+https://pub.dev/packages/kalertflutter
+
+---
+
+---
+
+# ❤️ Support the Project
+
+If you find **KAlertFlutter** useful, please consider supporting the project:
+
+⭐ Star this repository  
+🐛 Report issues  
+💡 Suggest new features
+
+And don’t forget to follow me on Instagram for more developer content:
+
+📸 https://instagram.com/coderx09
+
+Thanks for your support! 🚀
 
 ---
 
 ## ✨ Features
 
-* Simple alert dialog
-* Confirm dialog with boolean result
-* Clean and minimal API
-* Lightweight and dependency-free
-* Uses native Flutter Material dialogs
+✅ Success dialog
+
+✅ Error dialog
+
+✅ Warning dialog
+
+✅ Info dialog
+
+✅ Confirm dialog with boolean response
+
+✅ Prompt dialog with input field
+
+✅ Clean enum-based API
+
+✅ Rounded modern UI dialogs
+
+✅ Lightweight and dependency-free
+
+✅ Uses native Flutter Material dialogs
 
 ---
 
 ## 📦 Installation
 
-Add the package to your project:
+Add the package:
 
 ```yaml
 dependencies:
-  kalertflutter: ^1.0.0
+  kalertflutter: ^1.2.0
 ```
 
 Then run:
@@ -45,51 +84,62 @@ import 'package:kalertflutter/kalertflutter.dart';
 
 ## 📘 Show Alert Dialog
 
-Display a simple alert dialog:
-
 ```dart
 KAlert.show(
   context,
-  "Saved successfully!",
+  title: "Success",
+  message: "Saved successfully!",
+  type: KAlertType.success,
 );
 ```
 
-With custom title:
+Supported dialog types:
+
+```
+success
+error
+warning
+info
+```
+
+Example:
 
 ```dart
 KAlert.show(
   context,
-  "Profile updated successfully!",
-  title: "Success",
+  title: "Error",
+  message: "Something went wrong!",
+  type: KAlertType.error,
 );
 ```
 
 ---
 
-## 📘 Show Confirm Dialog
-
-Display a confirmation dialog and receive user response:
+## 📘 Confirm Dialog
 
 ```dart
 bool? result = await KAlert.confirm(
   context,
-  "Delete this file?",
-);
-```
-
-Example with result handling:
-
-```dart
-bool? result = await KAlert.confirm(
-  context,
-  "Delete this file?",
+  title: "Delete file?",
+  message: "This action cannot be undone",
 );
 
 if (result == true) {
   print("User confirmed");
-} else {
-  print("User cancelled");
 }
+```
+
+---
+
+## 📘 Prompt Dialog (User Input)
+
+```dart
+String? value = await KAlert.prompt(
+  context,
+  title: "Enter your name",
+);
+
+print(value);
 ```
 
 ---
@@ -98,10 +148,15 @@ if (result == true) {
 
 ```dart
 ElevatedButton(
-  onPressed: () {
-    KAlert.show(context, "Hello from KAlertFlutter!");
-  },
-  child: const Text("Show Alert"),
+onPressed: () {
+KAlert.show(
+context,
+title: "Hello",
+message: "Welcome to KAlertFlutter",
+type: KAlertType.info,
+);
+},
+child: const Text("Show Alert"),
 );
 ```
 
