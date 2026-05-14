@@ -1,5 +1,6 @@
 ![pub.dev](https://img.shields.io/pub/v/kalertflutter)
 ![license](https://img.shields.io/badge/license-MIT-green)
+[![pub downloads](https://img.shields.io/pub/dm/kalertflutter)](https://pub.dev/packages/kalertflutter)
 ![flutter](https://img.shields.io/badge/platform-Flutter-blue)
 
 # KAlertFlutter
